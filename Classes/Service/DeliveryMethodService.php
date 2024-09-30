@@ -3,7 +3,6 @@ namespace FormatD\KeyRunner\Service;
 
 use Neos\Flow\Annotations as Flow;
 use FormatD\KeyRunner\Domain\TokenHandler;
-// use Neos\Flow\Utility\Now;
 
 #[Flow\Scope("singleton")]
 class DeliveryMethodService

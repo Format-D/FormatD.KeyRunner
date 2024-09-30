@@ -17,7 +17,6 @@ abstract class MailDeliveryMethodFrontendController extends DeliveryMethodFronte
 
     public function retryAction(string $providerName, string $id)
 	{
-
         $this->sendMailWithTOTP($providerName, $id);
 		$this->addFlashMessage('Der Code wurde erneut an die von Ihnen hinterlegte E-Mail-Adresse gesendet.', 'Code erneut gesendet.');
         $this->redirect("showInput", arguments: ["id" => $id, "providerName" => $providerName]);

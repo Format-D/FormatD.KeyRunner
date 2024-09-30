@@ -3,18 +3,15 @@ declare(strict_types=1);
 namespace FormatD\KeyRunner\Security\Authentication\Provider;
 
 use Neos\Flow\Annotations as Flow;
-use Neos\Flow\Core\Bootstrap;
 use Neos\Flow\Security\Authentication\Provider\AbstractProvider;
 use Neos\Flow\Security\Authentication\TokenInterface;
 use Neos\Flow\Security\Context as SecurityContext;
 use Neos\Flow\Security\Exception\AuthenticationRequiredException;
 use Neos\Flow\Security\Exception\UnsupportedAuthenticationTokenException;
 use FormatD\KeyRunner\Security\Authentication\Token\OtpToken;
-use FormatD\KeyRunner\Service\TOTPService;
 use FormatD\KeyRunner\Service\DeliveryMethodService;
 use Neos\Flow\Security\AccountFactory;
 use Neos\Flow\Security\AccountRepository;
-use GVB\Website\Domain\Repository\UserRepository;
 
 
 class TOTPAuthenticationProvider extends AbstractProvider
