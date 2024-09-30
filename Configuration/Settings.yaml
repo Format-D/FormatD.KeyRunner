@@ -1,0 +1,27 @@
+FormatD:
+  KeyRunner:
+    deliveryMethods:
+      mailOnly:
+        frontendController: \FormatD\KeyRunner\Controller\DeliveryMethod\Mail
+        options:
+          period: 900
+          digits: 6
+          # mailService: \Vendor\Site\Service\TOTPMailService
+
+      # authenticatorApp:
+      #   frontendController: \FormatD\KeyRunner\Controller\DeliveryMethod\KnownSecret
+
+Neos:
+  Flow:
+    security:
+      authentication:
+        providers:
+          # 'TwoFactorProvider:App':
+          #   provider: 'FormatD\KeyRunner\Security\Authentication\Provider\TOTPAuthenticationProvider'
+          #   token: 'FormatD\KeyRunner\Security\Authentication\Token\OTPToken'
+
+          'TwoFactorProvider:Mail':
+            provider: 'FormatD\KeyRunner\Security\Authentication\Provider\TOTPAuthenticationProvider'
+            token: 'FormatD\KeyRunner\Security\Authentication\Token\OTPToken'
+            providerOptions:
+              tokenDeliveryMethod: mailOnly

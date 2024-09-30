@@ -1,0 +1,19 @@
+{
+  "name": "formatd/keyrunner",
+  "description": "",
+  "type": "neos-package",
+  "require": {
+      "neos/flow": "*",
+      "spomky-labs/otphp": "11.3"
+  },
+  "autoload": {
+      "psr-4": {
+          "FormatD\\KeyRunner\\": "Classes/"
+      }
+  },
+  "extra": {
+      "neos": {
+          "package-key": "FormatD.KeyRunner"
+      }
+  }
+}
